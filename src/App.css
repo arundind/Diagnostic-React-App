@@ -1,19 +1,47 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+#root{
+max-width:1280px;
+margin:0 auto;
+padding:0;
+text-align:center;
 }
 
 body{
-font-family: Arial;
+font-family:Arial;
 margin:0;
 padding:0;
+animation:bgchange 12s infinite;
+}
+
+/* Background auto change */
+
+@keyframes bgchange{
+0%{background:#f2f2f2;}
+25%{background:#e0f0ff;}
+50%{background:#ffe6e6;}
+75%{background:#e6ffe6;}
+100%{background:#f2f2f2;}
+}
+
+/* Watermark */
+
+body::before{
+content:"My Website";
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:90px;
+color:rgba(0,0,0,0.05);
+white-space:nowrap;
+pointer-events:none;
+z-index:-1;
 }
 
 .container{
 padding:20px;
 }
+
+/* Navbar */
 
 .navbar{
 display:flex;
@@ -36,7 +64,10 @@ margin-left:20px;
 .nav-links a{
 color:white;
 text-decoration:none;
+font-weight:bold;
 }
+
+/* WhatsApp Button */
 
 .whatsapp-btn{
 position:fixed;
@@ -49,4 +80,111 @@ padding:15px 20px;
 border-radius:30px;
 cursor:pointer;
 font-size:16px;
+}
+/* Navbar */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:linear-gradient(90deg,#0a6ebd,#004a8f);
+color:white;
+padding:15px 40px;
+box-shadow:0 2px 10px rgba(0,0,0,0.2);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+/* Logo */
+
+.navbar h2{
+margin:0;
+font-size:22px;
+letter-spacing:1px;
+}
+
+/* Nav Links */
+
+.nav-links{
+display:flex;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.nav-links li{
+margin-left:25px;
+position:relative;
+}
+
+/* Links */
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:16px;
+font-weight:500;
+transition:0.3s;
+padding:5px 0;
+}
+
+/* Hover effect */
+
+.nav-links a:hover{
+color:#ffd43b;
+}
+
+/* Underline animation */
+
+.nav-links li::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+background:#ffd43b;
+left:0;
+bottom:-5px;
+transition:0.3s;
+}
+
+.nav-links li:hover::after{
+width:100%;
+}
+
+/* Mobile menu button */
+
+.menu-btn{
+display:none;
+font-size:24px;
+cursor:pointer;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.nav-links{
+position:absolute;
+top:60px;
+right:0;
+background:#0a6ebd;
+flex-direction:column;
+width:200px;
+display:none;
+padding:20px;
+}
+
+.nav-links li{
+margin:15px 0;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.menu-btn{
+display:block;
+}
+
 }

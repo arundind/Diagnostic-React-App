@@ -5,11 +5,14 @@ function About() {
   return (
     <div className="about-container">
 
-      <h1>About Our Diagnostic Center</h1>
+      <div className="about-hero">
+        <h1>About Our Diagnostic Center</h1>
+      </div>
 
       <div className="about-section">
 
         <div className="about-text">
+
           <p>
             Our diagnostic center is dedicated to providing high-quality
             laboratory testing services. We use advanced medical technology
@@ -26,16 +29,20 @@ function About() {
             With modern equipment and experienced staff, we ensure
             quality healthcare services for everyone.
           </p>
+
         </div>
 
         <div className="about-image">
+
           <img
             src="https://images.unsplash.com/photo-1581595219315-a187dd40c322"
             alt="Diagnostic Lab"
           />
+
         </div>
 
       </div>
+
 
       <div className="about-features">
 
@@ -45,17 +52,17 @@ function About() {
 
           <div className="card">
             <h3>Advanced Technology</h3>
-            <p>Modern diagnostic machines for accurate results.</p>
+            <p>Modern diagnostic machines for accurate test results.</p>
           </div>
 
           <div className="card">
             <h3>Expert Doctors</h3>
-            <p>Experienced professionals and certified technicians.</p>
+            <p>Experienced doctors and certified technicians.</p>
           </div>
 
           <div className="card">
             <h3>Fast Reports</h3>
-            <p>Quick report delivery with reliable results.</p>
+            <p>Quick and reliable report delivery system.</p>
           </div>
 
         </div>

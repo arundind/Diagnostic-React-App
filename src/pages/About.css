@@ -1,71 +1,126 @@
-.about-page{
-padding:40px;
-max-width:1200px;
-margin:auto;
-font-family:Arial;
+.about-container{
+width:100%;
+font-family:Arial, sans-serif;
 }
 
-.about-header{
-text-align:center;
-margin-bottom:40px;
-}
+/* Hero Section */
 
-.about-header h1{
-color:#0a6ebd;
-margin-bottom:10px;
-}
-
-.about-header p{
-font-size:18px;
-color:#555;
-}
-
-.about-content{
+.about-hero{
+height:250px;
+background-image:url("https://images.unsplash.com/photo-1581595219315-a187dd40c322");
+background-size:cover;
+background-position:center;
 display:flex;
 align-items:center;
+justify-content:center;
+color:white;
+}
+
+.about-hero h1{
+background:rgba(0,0,0,0.6);
+padding:20px 40px;
+border-radius:6px;
+font-size:40px;
+}
+
+/* About Section */
+
+.about-section{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:60px 40px;
 gap:40px;
 flex-wrap:wrap;
 }
 
-.about-image img{
-width:450px;
-border-radius:10px;
-}
+/* Text */
 
 .about-text{
 flex:1;
+font-size:18px;
+line-height:1.7;
+color:#333;
 }
 
-.about-text h2{
-color:#0a6ebd;
-margin-top:20px;
-}
+/* Image */
 
-.about-text p{
-line-height:1.6;
-margin-top:10px;
-}
-
-.about-text ul{
-margin-top:10px;
-padding-left:20px;
-}
-
-.about-text li{
-margin-bottom:6px;
-}
-
-/* Mobile Responsive */
-
-@media (max-width:768px){
-
-.about-content{
-flex-direction:column;
+.about-image{
+flex:1;
 text-align:center;
 }
 
 .about-image img{
 width:100%;
+max-width:500px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.about-image img:hover{
+transform:scale(1.05);
+}
+
+/* Features Section */
+
+.about-features{
+background:#f5f9ff;
+padding:60px 20px;
+text-align:center;
+}
+
+.about-features h2{
+font-size:32px;
+margin-bottom:40px;
+color:#0a6ebd;
+}
+
+/* Cards */
+
+.feature-cards{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.card{
+width:260px;
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card h3{
+color:#0a6ebd;
+margin-bottom:10px;
+}
+
+.card p{
+color:#555;
+}
+
+/* Hover */
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.about-section{
+flex-direction:column;
+text-align:center;
+}
+
+.about-hero h1{
+font-size:28px;
 }
 
 }

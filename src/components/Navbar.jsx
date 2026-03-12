@@ -1,19 +1,32 @@
-import React from "react";
+import React,{useState} from "react";
 import { Link } from "react-router-dom";
 
-function Navbar() {
-  return (
-    <nav className="navbar">
-      <h2>Diagnostic Center</h2>
+function Navbar(){
 
-      <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About Us</Link></li>
-        <li><Link to="/services">Services</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-      </ul>
-    </nav>
-  );
+const [menuOpen,setMenuOpen] = useState(false);
+
+return(
+
+<nav className="navbar">
+
+<h2>My Website</h2>
+
+<div className="menu-btn" onClick={()=>setMenuOpen(!menuOpen)}>
+☰
+</div>
+
+<ul className={menuOpen ? "nav-links active" : "nav-links"}>
+
+<li><Link to="/">Home</Link></li>
+<li><Link to="/about">About</Link></li>
+<li><Link to="/services">Services</Link></li>
+<li><Link to="/contact">Contact</Link></li>
+
+</ul>
+
+</nav>
+
+)
 }
 
 export default Navbar;

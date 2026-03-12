@@ -5,12 +5,16 @@ function Home() {
     <div>
 
       {/* Hero Section */}
-      <div style={styles.hero}>
-        <div style={styles.heroText}>
-          <h1>Welcome to Diagnostic Center</h1>
-          <p>
-            We provide accurate and reliable medical diagnostic services using
-            modern technology and experienced doctors.
+      <section style={styles.hero}>
+
+        <div style={styles.overlay}></div>
+
+        <div style={styles.heroContent}>
+          <h1 style={styles.title}>Advanced Diagnostic Center</h1>
+
+          <p style={styles.subtitle}>
+            Accurate and reliable medical testing with modern equipment
+            and experienced doctors.
           </p>
 
           <button style={styles.btn}>
@@ -18,51 +22,69 @@ function Home() {
           </button>
         </div>
 
-        <div>
-          <img
-            src="https://images.unsplash.com/photo-1581595219315-a187dd40c322"
-            alt="diagnostic lab"
-            style={styles.image}
-          />
-        </div>
-      </div>
+      </section>
+
 
       {/* Features Section */}
-      <div style={styles.section}>
-        <h2>Our Features</h2>
+
+      <section style={styles.section}>
+
+        <h2 style={styles.heading}>Why Choose Us</h2>
 
         <div style={styles.cardContainer}>
 
           <div style={styles.card}>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2785/2785819.png"
+              alt="lab"
+              style={styles.icon}
+            />
             <h3>Advanced Lab Equipment</h3>
-            <p>Modern diagnostic machines for accurate results.</p>
+            <p>Modern machines ensure accurate and reliable test results.</p>
           </div>
 
           <div style={styles.card}>
-            <h3>Experienced Doctors</h3>
-            <p>Qualified medical experts and professional staff.</p>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png"
+              alt="doctor"
+              style={styles.icon}
+            />
+            <h3>Expert Doctors</h3>
+            <p>Qualified doctors and trained medical professionals.</p>
           </div>
 
           <div style={styles.card}>
-            <h3>Quick Report Delivery</h3>
-            <p>Fast and reliable test report delivery system.</p>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
+              alt="report"
+              style={styles.icon}
+            />
+            <h3>Fast Reports</h3>
+            <p>Get your medical reports quickly and securely.</p>
           </div>
 
         </div>
-      </div>
+
+      </section>
+
 
       {/* Services Section */}
-      <div style={styles.section}>
-        <h2>Our Diagnostic Services</h2>
 
-        <ul style={styles.serviceList}>
-          <li>Blood Test</li>
-          <li>X-Ray</li>
-          <li>MRI Scan</li>
-          <li>CT Scan</li>
-          <li>Full Body Checkup</li>
-        </ul>
-      </div>
+      <section style={styles.serviceSection}>
+
+        <h2 style={styles.heading}>Our Diagnostic Services</h2>
+
+        <div style={styles.services}>
+
+          <div style={styles.service}>Blood Test</div>
+          <div style={styles.service}>X-Ray</div>
+          <div style={styles.service}>MRI Scan</div>
+          <div style={styles.service}>CT Scan</div>
+          <div style={styles.service}>Full Body Checkup</div>
+
+        </div>
+
+      </section>
 
     </div>
   );
@@ -71,59 +93,104 @@ function Home() {
 const styles = {
 
   hero:{
+    height:"80vh",
+    backgroundImage:"url(https://images.unsplash.com/photo-1581595219315-a187dd40c322)",
+    backgroundSize:"cover",
+    backgroundPosition:"center",
     display:"flex",
-    justifyContent:"space-between",
     alignItems:"center",
-    padding:"40px",
-    background:"#f4f8ff",
-    flexWrap:"wrap"
+    justifyContent:"center",
+    position:"relative",
+    color:"white"
   },
 
-  heroText:{
-    maxWidth:"500px"
+  overlay:{
+    position:"absolute",
+    top:0,
+    left:0,
+    width:"100%",
+    height:"100%",
+    background:"rgba(0,0,0,0.55)"
   },
 
-  image:{
-    width:"400px",
-    borderRadius:"10px"
+  heroContent:{
+    position:"relative",
+    textAlign:"center",
+    maxWidth:"700px",
+    padding:"20px"
+  },
+
+  title:{
+    fontSize:"48px",
+    marginBottom:"20px"
+  },
+
+  subtitle:{
+    fontSize:"20px",
+    lineHeight:"1.6"
   },
 
   btn:{
-    marginTop:"20px",
-    padding:"12px 20px",
+    marginTop:"25px",
+    padding:"14px 30px",
     background:"#0a6ebd",
     color:"white",
     border:"none",
     borderRadius:"6px",
+    fontSize:"18px",
     cursor:"pointer",
-    fontSize:"16px"
+    transition:"0.3s"
   },
 
   section:{
-    padding:"40px",
+    padding:"60px 20px",
+    background:"#f7f9fc",
     textAlign:"center"
+  },
+
+  heading:{
+    fontSize:"32px",
+    marginBottom:"40px",
+    color:"#0a6ebd"
   },
 
   cardContainer:{
     display:"flex",
     justifyContent:"center",
-    gap:"20px",
-    flexWrap:"wrap",
-    marginTop:"20px"
+    gap:"25px",
+    flexWrap:"wrap"
   },
 
   card:{
-    width:"250px",
-    padding:"20px",
+    width:"280px",
     background:"white",
+    padding:"25px",
     borderRadius:"10px",
-    boxShadow:"0 4px 10px rgba(0,0,0,0.1)"
+    boxShadow:"0 4px 15px rgba(0,0,0,0.1)"
   },
 
-  serviceList:{
-    listStyle:"none",
-    padding:"0",
-    marginTop:"20px",
+  icon:{
+    width:"60px",
+    marginBottom:"15px"
+  },
+
+  serviceSection:{
+    padding:"60px 20px",
+    textAlign:"center"
+  },
+
+  services:{
+    display:"flex",
+    justifyContent:"center",
+    flexWrap:"wrap",
+    gap:"20px"
+  },
+
+  service:{
+    background:"#0a6ebd",
+    color:"white",
+    padding:"15px 30px",
+    borderRadius:"30px",
     fontSize:"18px"
   }
 
