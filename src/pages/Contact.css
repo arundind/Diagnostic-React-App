@@ -1,0 +1,117 @@
+/* Page Background */
+
+body{
+margin:0;
+padding:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f4f7fb;
+}
+
+/* Contact Page Layout */
+
+.contact-container{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:40px;
+}
+
+/* Page Title */
+
+.contact-container h1{
+font-size:36px;
+color:#0a6ebd;
+margin-bottom:20px;
+}
+
+/* Contact Info Box */
+
+.contact-info{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+margin-bottom:25px;
+width:100%;
+max-width:450px;
+text-align:left;
+}
+
+.contact-info p{
+margin:8px 0;
+font-size:16px;
+}
+
+/* Form Title */
+
+.contact-container h2{
+margin-bottom:15px;
+color:#333;
+}
+
+/* Form Layout */
+
+.contact-form{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+width:100%;
+max-width:450px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+/* Input Fields */
+
+.contact-form input{
+padding:12px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:15px;
+transition:0.3s;
+}
+
+.contact-form input:focus{
+outline:none;
+border-color:#0a6ebd;
+box-shadow:0 0 4px rgba(10,110,189,0.3);
+}
+
+/* Submit Button */
+
+.contact-form button{
+background:#25D366;
+color:white;
+border:none;
+padding:12px;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.contact-form button:hover{
+background:#1ebe5d;
+}
+
+/* Responsive */
+
+@media(max-width:600px){
+
+.contact-container{
+padding:20px;
+}
+
+.contact-form{
+padding:20px;
+}
+
+.contact-container h1{
+font-size:28px;
+}
+
+}
