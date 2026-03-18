@@ -93,7 +93,8 @@ function Home() {
 const styles = {
 
   hero:{
-    height:"80vh",
+    height:"100vh",
+    width:"100%",
     backgroundImage:"url(https://images.unsplash.com/photo-1581595219315-a187dd40c322)",
     backgroundSize:"cover",
     backgroundPosition:"center",
@@ -192,7 +193,8 @@ const styles = {
     padding:"15px 30px",
     borderRadius:"30px",
     fontSize:"18px"
-  }
+  },
+  
 
 };
 
